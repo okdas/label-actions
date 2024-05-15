@@ -91,6 +91,9 @@ class App {
           commentBody = commentBody.replace(
             /{issue-author}/,
             threadData.user.login
+          ).replace(
+            /{issue-id}/,
+            threadData.number
           );
 
           if (threadType === 'discussion') {
