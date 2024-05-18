@@ -89,10 +89,10 @@ class App {
       const commentAction = async () => {
         for (let commentBody of actions.comment) {
           commentBody = commentBody.replace(
-            /{issue-author}/,
+            /{issue-author}/g,
             threadData.user.login
           ).replace(
-            /{issue-id}/,
+            /{issue-id}/g,
             threadData.number
           );
 
